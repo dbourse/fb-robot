@@ -1,0 +1,12 @@
+<!--<button class="button fancy-button"(click)="submitLogin();">
+  <i class="material-icons">perm_identity</i>Se connecter
+</button>-->
+<h2>{{title}}</h2>
+<div class="form-group">
+  <input type="text" class="form-control" id="userId" placeholder="Identifiant" [ngModel]= "userId" (ngModelChange)="userId = $event"(keydown.enter)="submitLogin(userId, password)">
+  <input type="password" class="form-control" id="password" placeholder="Mot de passe" [ngModel]= "password" (ngModelChange)="password = $event"(keydown.enter)="submitLogin(userId, password)">
+
+  <button type="submit" class="btn btn-primary" (click)="submitLogin(userId, password)"  >Se connecter</button>
+
+
+</div>

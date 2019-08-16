@@ -1,0 +1,12 @@
+<h2>{{title}}</h2>
+<div *ngFor ="let parametre of listeParametres; index as parametreId">
+  <p>{{parametre}}</p>
+</div>
+
+<div class="form-group">
+  <input type="text" class="form-control" id="inputParametre" placeholder="" [ngModel]= "inputParametre" (ngModelChange)="inputParametre = $event"(keydown.enter)="ajouterParametre(inputParametre)">
+  <button type="submit" class="btn btn-primary" (click)="ajouterParametre(inputParametre)"  >Ajouter</button>
+
+
+</div>
+

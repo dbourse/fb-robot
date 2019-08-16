@@ -1,0 +1,10 @@
+<h2>Critères</h2>
+<select >
+ < <option *ngFor ="let filtreItem of filtre; index as filtreItemId">{{filtreItem}}</option>>
+</select>
+<input [value]="locationName" (input)="locationName = $event.target.value; updateLocationName(locationName)">
+<h3>Resultats</h3>
+
+<div *ngFor ="let critere of criteres; index as critereId">
+  <p>{{critere.fields.location_name}}/{{critere.fields.location_department}}/{{critere.fields.location_region}}</p>
+</div>
